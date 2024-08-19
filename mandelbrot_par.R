@@ -37,10 +37,10 @@ print(microbenchmark::microbenchmark(
            FUN = mandelbrot)
 ))
 
-out_parapply <- parApply(cl,
-                         X = points,
-                         MARGIN = c(1, 2),
-                         FUN = mandelbrot)
+# out_parapply <- parApply(cl,
+#                          X = points,
+#                          MARGIN = c(1, 2),
+#                          FUN = mandelbrot)
 
 
 stopCluster(cl)

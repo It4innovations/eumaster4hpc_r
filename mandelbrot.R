@@ -65,18 +65,18 @@ all.equal(out_for,
 # Visualize ----
 
 # Base R solution
-image(out_for)
-
-# ggplot2 solution
-data.frame(
-  value = as.vector(out_for),
-  y = rep(1:resolution, each = resolution),
-  x = rep(1:resolution, rep = resolution)
-) |>
-  ggplot2::ggplot() +
-  ggplot2::geom_tile(ggplot2::aes(x = x, y = y, fill = value)) +
-  ggplot2::scale_fill_viridis_c()
-
-# Plotly solution
-plotly::plot_ly(z = t(out_for),
-                type = "heatmap")
+# image(out_for)
+# 
+# # ggplot2 solution
+# data.frame(
+#   value = as.vector(out_for),
+#   y = rep(1:resolution, each = resolution),
+#   x = rep(1:resolution, rep = resolution)
+# ) |>
+#   ggplot2::ggplot() +
+#   ggplot2::geom_tile(ggplot2::aes(x = x, y = y, fill = value)) +
+#   ggplot2::scale_fill_viridis_c()
+# 
+# # Plotly solution
+# plotly::plot_ly(z = t(out_for),
+#                 type = "heatmap")

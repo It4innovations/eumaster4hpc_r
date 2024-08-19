@@ -2,7 +2,7 @@
 
 resolution <- as.integer(100) # Resolution of output image. This increases the exponentially x^2.
 max.iter <- as.integer(1000)
-processes <- 4
+processes <- 128
 
 # Load parallel library ----
 library(parallel)
@@ -47,5 +47,5 @@ stopCluster(cl)
 # Visualize ----
 
 # Plotly solution
-plotly::plot_ly(z = t(out_for),
-                type = "heatmap")
+# plotly::plot_ly(z = t(out_for),
+#                 type = "heatmap")

@@ -44,7 +44,7 @@ system("srun hostname >> hostfile")
 hostname <- readLines("hostfile")
 
 plan(cluster,
-     workers = rep(hostname, 128))
+     workers = rep(hostname, 124))
 
 bt_time_par <- system.time(
   bt_res_par <- tune_grid(bt_wflow, ames_folds, grid = 50)
